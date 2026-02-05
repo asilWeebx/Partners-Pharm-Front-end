@@ -13,7 +13,7 @@ export default function ContactsPage() {
 
   const loadContacts = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/contacts/');
+      const response = await axios.get('https://partnerspharm.pythonanywhere.com/api/contacts/');
       setContacts(response.data.results || response.data);
     } catch (error) {
       console.error('Error loading contacts:', error);

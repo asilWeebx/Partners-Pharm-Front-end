@@ -17,9 +17,9 @@ export default function DashboardPage() {
   const loadStats = async () => {
     try {
       const [productsRes, partnersRes, contactsRes] = await Promise.all([
-        axios.get('http://localhost:8000/api/products/'),
-        axios.get('http://localhost:8000/api/partners/'),
-        axios.get('http://localhost:8000/api/contacts/'),
+        axios.get('https://partnerspharm.pythonanywhere.com/api/products/'),
+        axios.get('https://partnerspharm.pythonanywhere.com/api/partners/'),
+        axios.get('https://partnerspharm.pythonanywhere.com/api/contacts/'),
       ]);
 
       setStats({
