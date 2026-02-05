@@ -7,5 +7,3 @@
   to = "/index.html"
   status = 200
 
-[build]
-  command = "rm -rf node_modules/.vite && npm run build"
