@@ -25,7 +25,7 @@ export default function ContactsPage() {
 
   const handleMarkAsRead = async (id) => {
     try {
-      await axios.patch(`http://localhost:8000/api/contacts/${id}/`, { is_read: true });
+      await axios.patch(`https://partnerspharm.pythonanywhere.com/api/contacts/${id}/`, { is_read: true });
       loadContacts();
     } catch (error) {
       console.error('Error updating contact:', error);
@@ -36,7 +36,7 @@ export default function ContactsPage() {
   const handleDelete = async (id) => {
     if (!confirm('Rostdan ham o\'chirmoqchimisiz?')) return;
     try {
-      await axios.delete(`http://localhost:8000/api/contacts/${id}/`);
+      await axios.delete(`https://partnerspharm.pythonanywhere.com/api/contacts/${id}/`);
       loadContacts();
       setSelectedContact(null);
     } catch (error) {
