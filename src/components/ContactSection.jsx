@@ -18,7 +18,7 @@ export default function ContactSection() {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:8000/api/contacts/', formData);
+      await axios.post('https://partnerspharm.pythonanywhere.com/api/contacts/', formData);
       setSubmitted(true);
       setFormData({ name: '', surname: '', phone: '', message: '' });
       
@@ -178,8 +178,8 @@ export default function ContactSection() {
                   <p className="text-sm text-green-100">
                     {getText('email')}
                   </p>
-                  <a href="mailto:info@greenline.uz" className="text-white font-semibold hover:text-green-100 transition-colors">
-                    info@greenline.uz
+                  <a href="mailto:partnerspharm1@gmail.com" className="text-white font-semibold hover:text-green-100 transition-colors">
+                    partnerspharm1@gmail.com
                   </a>
                 </div>
               </div>

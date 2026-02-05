@@ -164,3 +164,7 @@ nav *,
 .group:hover > div[class*="opacity-0"] {
   overflow: visible !important;
 }
+
+.rounded-15 {
+  border-radius: 15px;
+}

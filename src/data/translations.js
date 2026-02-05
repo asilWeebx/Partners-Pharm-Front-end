@@ -11,10 +11,9 @@ export const translations = {
       call: "Qo'ng'iroq qiling"
     },
     hero: {
-      title: "GreenLine — Kompaniya veb-sayti",
-      subtitle: "Ishonchli hamkor sifatida biz professional mahsulotlar va aniq ma'lumotlar bilan xizmat ko'rsatamiz.",
+      title: "PARTNERS PHARM",
+      subtitle: "Sifat, ishonch, samaradorlik",
       viewCatalog: "Katalogni ko'rish",
-      contact: "Aloqa"
     },
     features: {
       feature1Title: "Rasmiy kompaniya ma'lumotlari",
@@ -50,7 +49,9 @@ export const translations = {
       subtitle: "Biz ishonchli brendlar bilan hamkorlik qilamiz"
     },
     footer: {
-      description: "Ishonchli hamkor sifatida biz professional mahsulotlar va aniq ma'lumotlar bilan xizmat ko'rsatamiz.",
+      description: "Ishonchli hamkoringiz",
+      home: "Bosh Sahifa",
+      catalog: "Katalog",
       quickLinks: "Tezkor havolalar",
       contact: "Aloqa",
       followUs: "Bizni kuzatib boring",
@@ -76,10 +77,9 @@ export const translations = {
       call: "Позвонить"
     },
     hero: {
-      title: "GreenLine — Корпоративный сайт",
-      subtitle: "Как надёжный партнер, мы предоставляем профессиональные продукты и точную информацию.",
+      title: "PARTNERS PHARM",
+      subtitle: "Качество, надежность, эффективность",
       viewCatalog: "Посмотреть каталог",
-      contact: "Контакты"
     },
     features: {
       feature1Title: "Официальная информация о компании",
@@ -115,8 +115,10 @@ export const translations = {
       subtitle: "Мы сотрудничаем с надёжными брендами"
     },
     footer: {
-      description: "Как надёжный партнер, мы предоставляем профессиональные продукты и точную информацию.",
+      description: "Ваш надежный партнер",
+      home: "Главная страница",
       quickLinks: "Быстрые ссылки",
+      catalog: "Каталог",
       contact: "Контакты",
       followUs: "Следите за нами",
       rights: "Все права защищены"
@@ -141,10 +143,9 @@ export const translations = {
       call: "Call Us"
     },
     hero: {
-      title: "GreenLine — Company Website",
-      subtitle: "As a reliable partner, we provide professional products and accurate information.",
+      title: "PARTNERS PHARM",
+      subtitle: "Quality, reliability, efficiency",
       viewCatalog: "View Catalog",
-      contact: "Contact"
     },
     features: {
       feature1Title: "Official Company Information",
@@ -180,8 +181,10 @@ export const translations = {
       subtitle: "We partner with trusted brands"
     },
     footer: {
-      description: "As a reliable partner, we provide professional products and accurate information.",
+      description: "Your trusted partner",
       quickLinks: "Quick Links",
+      home: "Main page",
+      catalog: "Catalog",
       contact: "Contact",
       followUs: "Follow Us",
       rights: "All rights reserved"

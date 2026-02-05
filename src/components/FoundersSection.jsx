@@ -53,7 +53,7 @@ export default function FoundersSection({ founders }) {
           {founders.map((founder, index) => (
             <div 
               key={founder.id}
-              className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 animate-fadeInUp overflow-hidden"
+              className="relative bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-300 animate-fadeInUp overflow-hidden"
               style={{
                 animationDelay: `${index * 0.2}s`,
                 borderWidth: '3px',
@@ -62,20 +62,19 @@ export default function FoundersSection({ founders }) {
               }}
             >
               <div className="relative flex flex-col items-center text-center">
-                {/* Icon/Image */}
-                <div className="mb-6 overflow-hidden">
+                {/* LARGE Image - Screenshot'dagi kabi */}
+                <div className="mb-8 overflow-hidden">
                   {founder.image ? (
-                    <div className="w-32 h-32 rounded-full overflow-hidden">
+                    <div className="rounded-15 overflow-hidden ">
                       <img 
                         src={founder.image}
                         alt={getFounderName(founder)}
                         className="w-full h-full object-cover"
-                        style={{ display: 'block' }}
                       />
                     </div>
                   ) : (
-                    <div className="w-32 h-32 bg-green-500 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-4xl">
+                    <div className="w-48 h-48 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+                      <span className="text-white font-bold text-6xl">
                         {founder.initials || getInitials(getFounderName(founder))}
                       </span>
                     </div>
@@ -87,19 +86,14 @@ export default function FoundersSection({ founders }) {
                   {getFounderName(founder)}
                 </h3>
                 
-                {/* Position */}
-                <p className="text-green-600 font-semibold text-lg mb-4">
+                {/* Position - Green */}
+                <p className="text-green-600 font-semibold text-lg mb-2">
                   {getFounderPosition(founder)}
                 </p>
 
-                {/* Role/Subtitle */}
-                <p className="text-gray-600 text-base mb-6 font-medium">
+                {/* Role - Gray */}
+                <p className="text-gray-600 text-base mb-8 font-medium">
                   {getFounderRole(founder)}
-                </p>
-
-                {/* Full Description */}
-                <p className="text-gray-600 leading-relaxed text-sm mb-8 text-left">
-                  {getFounderDescription(founder)}
                 </p>
 
                 {/* Batafsil button */}
@@ -166,7 +160,6 @@ function FounderModal({ founder, onClose, language, getFounderName, getFounderPo
                       src={founder.image}
                       alt={getFounderName(founder)}
                       className="w-full h-full object-cover"
-                      style={{ display: 'block' }}
                     />
                   </div>
                 ) : (
@@ -192,7 +185,7 @@ function FounderModal({ founder, onClose, language, getFounderName, getFounderPo
             </div>
           </div>
 
-          {/* Body */}
+          {/* Body - BIO HERE */}
           <div className="p-8 space-y-6">
             {/* Description */}
             <div>

@@ -24,12 +24,16 @@ export default function CallModal({ isOpen, onClose }) {
 
           <div className="bg-green-50 rounded-2xl p-6 mb-6 text-center">
             <p className="text-green-600 font-semibold text-sm mb-2">{t.callModal.phoneLabel}</p>
-            <a href="tel:+998901234567" className="text-3xl font-bold text-gray-900 hover:text-green-600 transition-colors">
-              +998 90 123 45 67
+            <a href="tel:+998909513434" className="text-3xl font-bold text-gray-800 hover:text-green-600 transition-colors">
+              +998 90 951 34 34
+            </a><br />
+            <a href="tel:+998941100105" className="text-3xl font-bold text-gray-800 hover:text-green-600 transition-colors">
+              +998 94 110 01 05
             </a>
+            
           </div>
 
-          <a href="tel:+998901234567" className="w-full btn-green px-6 py-4 rounded-xl font-semibold text-lg flex items-center justify-center">
+          <a href="tel:+998909513434" className="w-full btn-green px-6 py-4 rounded-xl font-semibold text-lg flex items-center justify-center">
             <i className="fas fa-phone mr-2"></i>
             {t.callModal.callButton}
           </a>
@@ -38,7 +42,7 @@ export default function CallModal({ isOpen, onClose }) {
             <div className="flex items-center justify-center space-x-6 text-sm text-gray-600">
               <div className="flex items-center space-x-2">
                 <i className="fas fa-envelope text-green-600"></i>
-                <span>info@greenline.uz</span>
+                <span>partnerspharm1@gmail.com</span>
               </div>
             </div>
           </div>

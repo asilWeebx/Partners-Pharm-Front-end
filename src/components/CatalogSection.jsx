@@ -83,15 +83,7 @@ export default function CatalogSection({ setShowCallModal }) {
               className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-green-500 transition-colors"
             />
           </div>
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            className="px-6 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-green-500 bg-white transition-colors"
-          >
-            <option value="default">{t.catalog.sortDefault}</option>
-            <option value="name">{t.catalog.sortName}</option>
-            <option value="code">{t.catalog.sortCode}</option>
-          </select>
+          
         </div>
 
         {/* Products Grid */}
