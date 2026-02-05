@@ -15,7 +15,7 @@ export default function LoginPage() {
 
     try {
       // Simple demo authentication
-      if (username === 'admin' && password === 'admin123') {
+      if (username === 'admin' && password === 'partnerspharm1234') {
         localStorage.setItem('token', 'demo-token');
         localStorage.setItem('user', JSON.stringify({ username: 'admin' }));
         navigate('/admin/dashboard');
