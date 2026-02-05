@@ -36,8 +36,9 @@ export default function Navbar({ isScrolled, setShowCallModal }) {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <img className="w-100% h-10 rounded-full" src="public/images/logo/logo.jpg" alt="" />
-          </a>
+  <img className="w-full h-10 rounded-full" src="/images/logo/logo.jpg" alt="Logo" />
+</a>
+
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
