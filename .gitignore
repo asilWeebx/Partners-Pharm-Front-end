@@ -31,4 +31,4 @@ dist-ssr
 # Build files
 build/
 
-.greenline-backend
+greenline-backend/

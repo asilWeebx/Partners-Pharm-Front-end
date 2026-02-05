@@ -39,7 +39,7 @@ export const mockFounders = [
     
     description_en: "Oncologist | Founder of HomeMed platform. Safarov Doniyor Oybekovich is an oncologist and founder of PARTNERS PHARM company and HomeMed platform. Graduated from Tashkent Pediatric Medical Institute in 2008. Completed clinical residency in oncology in 2012–2014. Worked in pharmaceutical companies 'Yuriya Pharm' and 'Actavis' in 2012–2014. Since 2014, worked as an oncologist at the central polyclinic of Yunusabad district. Founded PARTNERS PHARM company in 2022. In the company, he focuses on team development, quality control of manufactured products, and process improvement.",
     
-    image: "/images/founders/founder-20.jpeg",
+    image: "public/images/founders/founder-20.jpeg",
     initials: "SD"
   },
   {
@@ -60,7 +60,7 @@ export const mockFounders = [
     
     description_en: "Radiologist | Strategy and international cooperation. Adizov Sherali Alievich is the founder of PARTNERS PHARM company. Graduated from Tashkent Pediatric Medical Institute in 2008. Completed master's degree in radiology in 2011. Founded PARTNERS PHARM company in 2022. Focuses on determining the company's strategic directions, international cooperation issues, and improving quality control in production processes.",
     
-    image: "/images/founders/founder-10.jpeg",
+    image: "public/images/founders/founder-10.jpeg",
     initials: "AS"
   }
 ];
