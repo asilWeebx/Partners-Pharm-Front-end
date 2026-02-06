@@ -14,8 +14,9 @@ import AdminLayout from './pages/AdminLayout';
 import DashboardPage from './pages/DashboardPage';
 import ProductsPage from './pages/ProductsPage';
 import PartnersPage from './pages/PartnersPage';
+import DiseasesPage from './pages/DiseasesPage';  // ← ADD THIS
 import ContactsPage from './pages/ContactsPage';
-import { mockDiseases, mockFounders } from './data/mockData';
+import { mockFounders } from './data/mockData';  // ← REMOVED mockDiseases
 
 // Protected Route Component
 function ProtectedRoute({ children }) {
@@ -40,7 +41,8 @@ function LandingPage({ showCallModal, setShowCallModal }) {
       <Navbar isScrolled={isScrolled} setShowCallModal={setShowCallModal} />
       <main className="flex-1">
         <HeroSection />
-        <DiseasesSection diseases={mockDiseases} setShowCallModal={setShowCallModal} />
+        {/* REMOVED diseases={mockDiseases} prop */}
+        <DiseasesSection setShowCallModal={setShowCallModal} />
         <CatalogSection setShowCallModal={setShowCallModal} />
         <FoundersSection founders={mockFounders} />
         <PartnersSection />
@@ -96,6 +98,15 @@ function App() {
           </ProtectedRoute>
         }>
           <Route index element={<PartnersPage />} />
+        </Route>
+
+        {/* ← ADD DISEASES ROUTE */}
+        <Route path="/admin/diseases" element={
+          <ProtectedRoute>
+            <AdminLayout />
+          </ProtectedRoute>
+        }>
+          <Route index element={<DiseasesPage />} />
         </Route>
 
         <Route path="/admin/contacts" element={
