@@ -17,6 +17,7 @@ export default function AdminLayout() {
     { icon: 'fa-home', label: 'Dashboard', path: '/admin/dashboard' },
     { icon: 'fa-box', label: 'Mahsulotlar', path: '/admin/products' },
     { icon: 'fa-handshake', label: 'Hamkorlar', path: '/admin/partners' },
+    { icon: 'fa-virus', label: 'Kasalliklar', path: '/admin/diseases' },  // ← ADD THIS
     { icon: 'fa-envelope', label: 'Xabarlar', path: '/admin/contacts' },
   ];
 

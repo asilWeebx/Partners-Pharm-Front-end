@@ -5,6 +5,7 @@ export default function DashboardPage() {
   const [stats, setStats] = useState({
     products: 0,
     partners: 0,
+    diseases: 0,  // ← NEW
     contacts: 0,
   });
   const [loading, setLoading] = useState(true);
@@ -16,15 +17,17 @@ export default function DashboardPage() {
 
   const loadStats = async () => {
     try {
-      const [productsRes, partnersRes, contactsRes] = await Promise.all([
+      const [productsRes, partnersRes, diseasesRes, contactsRes] = await Promise.all([
         axios.get('https://partnerspharm.pythonanywhere.com/api/products/'),
         axios.get('https://partnerspharm.pythonanywhere.com/api/partners/'),
+        axios.get('https://partnerspharm.pythonanywhere.com/api/diseases/').catch(() => ({ data: [] })),  // ← NEW (with fallback)
         axios.get('https://partnerspharm.pythonanywhere.com/api/contacts/'),
       ]);
 
       setStats({
         products: productsRes.data.results?.length || productsRes.data.length || 0,
         partners: partnersRes.data.results?.length || partnersRes.data.length || 0,
+        diseases: diseasesRes.data.results?.length || diseasesRes.data.length || 0,  // ← NEW
         contacts: contactsRes.data.results?.length || contactsRes.data.length || 0,
       });
     } catch (error) {
@@ -37,6 +40,7 @@ export default function DashboardPage() {
   const statCards = [
     { title: 'Mahsulotlar', value: stats.products, icon: 'fa-box', color: 'bg-blue-500', link: '/admin/products' },
     { title: 'Hamkorlar', value: stats.partners, icon: 'fa-handshake', color: 'bg-green-500', link: '/admin/partners' },
+    { title: 'Kasalliklar', value: stats.diseases, icon: 'fa-virus', color: 'bg-orange-500', link: '/admin/diseases' },  // ← NEW
     { title: 'Xabarlar', value: stats.contacts, icon: 'fa-envelope', color: 'bg-purple-500', link: '/admin/contacts' },
   ];
 
@@ -53,8 +57,8 @@ export default function DashboardPage() {
         </a>
       </div>
 
-      {/* Stats Cards */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Stats Cards - 4 columns now */}
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {statCards.map((card, index) => (
           <a key={index} href={card.link} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1" style={{animationDelay: `${index * 0.1}s`}}>
             <div className="flex items-center justify-between">
@@ -70,10 +74,10 @@ export default function DashboardPage() {
         ))}
       </div>
 
-      {/* Quick Actions */}
+      {/* Quick Actions - 4 columns now */}
       <div className="bg-white rounded-2xl p-6 shadow-lg">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Tez harakatlar</h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <a href="/admin/products" className="flex items-center space-x-3 p-4 border-2 border-gray-200 rounded-xl hover:border-green-500 hover:bg-green-50 transition-all">
             <i className="fas fa-plus-circle text-green-600 text-2xl"></i>
             <span className="font-semibold text-gray-900">Mahsulot qo'shish</span>
@@ -81,6 +85,10 @@ export default function DashboardPage() {
           <a href="/admin/partners" className="flex items-center space-x-3 p-4 border-2 border-gray-200 rounded-xl hover:border-green-500 hover:bg-green-50 transition-all">
             <i className="fas fa-plus-circle text-green-600 text-2xl"></i>
             <span className="font-semibold text-gray-900">Hamkor qo'shish</span>
+          </a>
+          <a href="/admin/diseases" className="flex items-center space-x-3 p-4 border-2 border-gray-200 rounded-xl hover:border-orange-500 hover:bg-orange-50 transition-all">
+            <i className="fas fa-plus-circle text-orange-600 text-2xl"></i>
+            <span className="font-semibold text-gray-900">Kasallik qo'shish</span>
           </a>
           <a href="/" target="_blank" className="flex items-center space-x-3 p-4 border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all">
             <i className="fas fa-eye text-blue-600 text-2xl"></i>
@@ -174,6 +182,30 @@ export default function DashboardPage() {
                   </ul>
                 </div>
 
+                {/* Kasalliklar - NEW */}
+                <div className="bg-orange-50 rounded-xl p-6">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
+                      <i className="fas fa-virus text-white text-xl"></i>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900">Kasalliklar</h3>
+                  </div>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start space-x-2">
+                      <i className="fas fa-check-circle text-green-600 mt-1"></i>
+                      <span><strong>Yangi kasallik:</strong> Kasallik nomini 3 tilda kiriting</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <i className="fas fa-check-circle text-green-600 mt-1"></i>
+                      <span><strong>Mahsulotlar:</strong> Tavsiya etiladigan mahsulotlarni kiriting</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <i className="fas fa-check-circle text-green-600 mt-1"></i>
+                      <span><strong>Tartib:</strong> Ko'rsatish tartibini belgilang</span>
+                    </li>
+                  </ul>
+                </div>
+
                 {/* Xabarlar */}
                 <div className="bg-purple-50 rounded-xl p-6">
                   <div className="flex items-center space-x-3 mb-4">
@@ -203,11 +235,15 @@ export default function DashboardPage() {
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start space-x-2">
                       <i className="fas fa-star text-yellow-500 mt-1"></i>
-                      <span>Mahsulotlarda <strong>BARCHA 3 tilda</strong> to'ldiring</span>
+                      <span>Barcha ma'lumotlarni <strong>3 tilda</strong> to'ldiring</span>
                     </li>
                     <li className="flex items-start space-x-2">
                       <i className="fas fa-star text-yellow-500 mt-1"></i>
                       <span>Xabarlarni <strong>muntazam</strong> tekshiring</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <i className="fas fa-star text-yellow-500 mt-1"></i>
+                      <span>Tartib raqamlaridan foydalanib <strong>ko'rinishni</strong> nazorat qiling</span>
                     </li>
                   </ul>
                 </div>
