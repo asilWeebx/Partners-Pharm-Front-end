@@ -41,7 +41,7 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="text-center mb-8 animate-fadeInUp">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-green-500 rounded-2xl shadow-xl mb-4">
-            <span className="text-white font-bold text-3xl">G</span>
+            <span className="text-white font-bold text-3xl">P</span>
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Partners Pharm Admin</h1>
           <p className="text-gray-600">Boshqaruv paneliga kirish</p>

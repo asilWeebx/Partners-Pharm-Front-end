@@ -32,7 +32,7 @@ export default function AdminLayout() {
           {sidebarOpen ? (
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">G</span>
+                <span className="text-white font-bold text-xl">P</span>
               </div>
               <span className="font-bold text-lg">Partners Pharm</span>
             </div>
