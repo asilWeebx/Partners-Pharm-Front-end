@@ -27,7 +27,7 @@ export const translations = {
       title: "Kasalliklar bo'yicha ma'lumotnoma",
       subtitle: "Umumiy kasalliklar va mos keladigan mahsulotlar ro'yxati (faqat ma'lumot uchun)",
       callButton: "Batafsil uchun qo'ng'iroq qiling",
-      infoBanner: "Faqat ma'lumot uchun. Mavjudlik va tafsilotlar o'zgarishi mumkin. Aniqlashtirishuchun biz bilan bog'laning.",
+      infoBanner: "Faqat ma'lumot uchun. Mavjudlik va tafsilotlar o'zgarishi mumkin. Aniqlashtirish uchun biz bilan bog'laning.",
       recommendedProducts: "Mos keladigan mahsulotlar:"
     },
     catalog: {

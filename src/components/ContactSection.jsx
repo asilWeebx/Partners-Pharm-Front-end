@@ -41,7 +41,7 @@ export default function ContactSection() {
   const getText = (key) => {
     const texts = {
       title: { UZ: "Bog'lanish", RU: "Связаться", EN: "Contact" },
-      subtitle: { UZ: "Savollar va ma'lumotlarni aniqlashtirishuchun qo'ng'iroq qiling.", RU: "Вопросы и информацию можно уточнить, позвонив нам.", EN: "Questions and information can be clarified by calling us." },
+      subtitle: { UZ: "Savollar va ma'lumotlarni aniqlashtirish uchun qo'ng'iroq qiling.", RU: "Вопросы и информацию можно уточнить, позвонив нам.", EN: "Questions and information can be clarified by calling us." },
       name: { UZ: "Ism", RU: "Имя", EN: "First Name" },
       surname: { UZ: "Familiya", RU: "Фамилия", EN: "Last Name" },
       phone: { UZ: "Telefon raqam", RU: "Номер телефона", EN: "Phone Number" },
