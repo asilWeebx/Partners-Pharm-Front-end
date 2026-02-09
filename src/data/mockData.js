@@ -23,7 +23,7 @@ export const mockDiseases = {
 export const mockFounders = [
   { 
     id: 1,
-    name: "Safarov Doniyor Oybeko'g'li",
+    name: "Safarov Doniyor Oybekovich",
     name_ru: "Сафаров Дониёр Ойбекович",
     name_en: "Safarov Doniyor Oybekovich",
     
